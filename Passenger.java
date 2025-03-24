@@ -29,7 +29,6 @@ public class Passenger implements PassengerRequirements {
             System.out.println("Passenger " + this.name + " boarded the train.");
         } else {
             System.out.println("Passenger " + this.name + " could not board the train.");
-        
         }
     }
 
