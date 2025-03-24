@@ -30,8 +30,10 @@ public class TrainTest {
         Passenger p1 = new Passenger("Yunxian");
         assertTrue(car.addPassenger(p1));
         assertEquals(1, car.seatsRemaining());
+        assertFalse(car.addPassenger(p1)); // Should fail because Yunxian is already in the car
+        assertEquals(1, car.seatsRemaining());
         Passenger p2 = new Passenger("Yunxian");
-        assertFalse(car.addPassenger(p2)); // Should fail because p1 is already in the car
+        assertFalse(car.addPassenger(p2)); // Should fail because Yunxian is already in the car
         assertEquals(1, car.seatsRemaining());
         Passenger p3 = new Passenger("Ding");
         assertTrue(car.addPassenger(p3));
